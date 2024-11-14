@@ -5,9 +5,9 @@ author: "Marcus Wathen"
 cover: "img/cover.png"
 authorlink: ""
 categories:
-  - tags:  - [programming]
+  -   -   - tags:  -   - -  - [programming]
 tags:
-  - draft:  - false
+  -   -   - draft:  -   - -  - false
 draft: Usage: gum choose [<options> ...]
 
 Choose an option from a list of choices
