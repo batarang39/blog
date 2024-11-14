@@ -1,25 +1,53 @@
 ---
 title: "Javascript"
-date: 2024-11-14T15:52:41+11:00
+description: ""
 author: "Marcus Wathen"
-cover: img/cover.png
-images:
-  - img/cover.png
-categories: [programming]
-tags: [programming]
-draft: false
+cover: "img/cover.png"
+authorlink: ""
+categories:
+  - tags:  - [programming]
+tags:
+  - draft:  - false
+draft: Usage: gum choose [<options> ...]
+
+Choose an option from a list of choices
+
+Arguments:
+  [<options> ...]    Options to choose from.
+
+Flags:
+  -h, --help                      Show context-sensitive help.
+  -v, --version                   Print the version number
+
+      --ordered                   Maintain the order of the selected options
+                                  ($GUM_CHOOSE_ORDERED)
+      --height=10                 Height of the list ($GUM_CHOOSE_HEIGHT)
+      --cursor="> "               Prefix to show on item that corresponds to the
+                                  cursor position ($GUM_CHOOSE_CURSOR)
+      --header=""                 Header value ($GUM_CHOOSE_HEADER)
+      --cursor-prefix="○ "        Prefix to show on the cursor item (hidden if
+                                  limit is 1) ($GUM_CHOOSE_CURSOR_PREFIX)
+      --selected-prefix="◉ "      Prefix to show on selected items (hidden if
+                                  limit is 1) ($GUM_CHOOSE_SELECTED_PREFIX)
+      --unselected-prefix="○ "
+                                  Prefix to show on unselected items (hidden if
+                                  limit is 1) ($GUM_CHOOSE_UNSELECTED_PREFIX)
+      --selected=,...             Options that should start as selected
+                                  ($GUM_CHOOSE_SELECTED)
+      --timeout=0                 Timeout until choose returns selected element
+                                  ($GUM_CCHOOSE_TIMEOUT)
+
+Selection
+  --limit=1          Maximum number of options to pick
+  --no-limit         Pick unlimited number of options (ignores limit)
+  --select-if-one    Select the given option if there is only one
+
+Style Flags
+  --cursor.foreground="212"      Foreground Color
+                                 ($GUM_CHOOSE_CURSOR_FOREGROUND)
+  --header.foreground="240"      Foreground Color
+                                 ($GUM_CHOOSE_HEADER_FOREGROUND)
+  --item.foreground=""           Foreground Color ($GUM_CHOOSE_ITEM_FOREGROUND)
+  --selected.foreground="212"    Foreground Color
+                                 ($GUM_CHOOSE_SELECTED_FOREGROUND)
 ---
-
-## Javascript
-
-Javascript is a programming language.
-
-## Learn more
-
-[https://javascript.info](https://javascript.info)
-
-Hello World
-
-```js
-console.log("hello world");
-```
