@@ -1,6 +1,6 @@
 ---
 title: "Virtualisation"
-date: 2024-11-14T15:28:13+11:00
+date: 2024-11-14T15:33:55+11:00
 author: "Marcus Wathen"
 cover: img/cover.png
 images:
