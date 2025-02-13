@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Act as Intermediaries Between the Physical Hardware and the Virtual Machines (VMs) Runni on The Batarang39 Blog</title>
+    <link>http://localhost:1313/categories/act-as-intermediaries-between-the-physical-hardware-and-the-virtual-machines-vms-runni/</link>
+    <description>Recent content in Act as Intermediaries Between the Physical Hardware and the Virtual Machines (VMs) Runni on The Batarang39 Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Nov 2024 15:33:27 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/act-as-intermediaries-between-the-physical-hardware-and-the-virtual-machines-vms-runni/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>he Power of Virtualisation: Unlocking Flexibility and Efficiency in IT</title>
+      <link>http://localhost:1313/posts/he-power-of-virtualisation-unlocking-flexibility-and-efficiency-in-it/</link>
+      <pubDate>Thu, 14 Nov 2024 15:33:27 +1100</pubDate>
+      <guid>http://localhost:1313/posts/he-power-of-virtualisation-unlocking-flexibility-and-efficiency-in-it/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

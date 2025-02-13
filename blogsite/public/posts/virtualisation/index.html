@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualisation | The Batarang39 Blog</title>
+
+    
+
+<link rel="canonical" href="http://localhost:1313/posts/virtualisation/" />
+
+
+
+<meta name="author" content="Marcus Wathen" />
+<meta name="description" content="The Power of Virtualisation: Unlocking Flexibility and Efficiency in IT
+Virtualisation has revolutionised the way we approach computing, storage, and networking. By creating virtual environments that mimic physical ones, this technology has enabled businesses to increase efficiency, reduce costs, and enhance scalability. In this blog post, we&rsquo;ll delve into the world of virtualisation, exploring its benefits, types, and applications.
+What is Virtualisation?
+Virtualisation is a software-based technology that creates a virtual version of a computer system, including hardware, storage, and networking resources. This virtual environment is decoupled from physical infrastructure, allowing multiple operating systems to run on a single physical machine. Virtualisation platforms, like VMware, Microsoft Hyper-V, or KVM, act as intermediaries between the physical hardware and the virtual machines (VMs) running on it.
+" />
+
+
+<meta name="keywords" content="">
+
+
+
+<meta name="generator" content="Hugo 0.136.4">
+
+
+<meta property="og:url" content="http://localhost:1313/posts/virtualisation/">
+  <meta property="og:site_name" content="The Batarang39 Blog">
+  <meta property="og:title" content="Virtualisation">
+  <meta property="og:description" content="The Power of Virtualisation: Unlocking Flexibility and Efficiency in IT
+Virtualisation has revolutionised the way we approach computing, storage, and networking. By creating virtual environments that mimic physical ones, this technology has enabled businesses to increase efficiency, reduce costs, and enhance scalability. In this blog post, we’ll delve into the world of virtualisation, exploring its benefits, types, and applications.
+What is Virtualisation?
+Virtualisation is a software-based technology that creates a virtual version of a computer system, including hardware, storage, and networking resources. This virtual environment is decoupled from physical infrastructure, allowing multiple operating systems to run on a single physical machine. Virtualisation platforms, like VMware, Microsoft Hyper-V, or KVM, act as intermediaries between the physical hardware and the virtual machines (VMs) running on it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-14T15:35:23+11:00">
+    <meta property="article:modified_time" content="2024-11-14T15:35:23+11:00">
+    <meta property="og:image" content="http://localhost:1313/img/cover.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/img/cover.png">
+  <meta name="twitter:title" content="Virtualisation">
+  <meta name="twitter:description" content="The Power of Virtualisation: Unlocking Flexibility and Efficiency in IT
+Virtualisation has revolutionised the way we approach computing, storage, and networking. By creating virtual environments that mimic physical ones, this technology has enabled businesses to increase efficiency, reduce costs, and enhance scalability. In this blog post, we’ll delve into the world of virtualisation, exploring its benefits, types, and applications.
+What is Virtualisation?
+Virtualisation is a software-based technology that creates a virtual version of a computer system, including hardware, storage, and networking resources. This virtual environment is decoupled from physical infrastructure, allowing multiple operating systems to run on a single physical machine. Virtualisation platforms, like VMware, Microsoft Hyper-V, or KVM, act as intermediaries between the physical hardware and the virtual machines (VMs) running on it.">
+
+
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/" alt="" />
+        </div>
+      </div>
+
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+      
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Virtualisation">
+  <meta itemprop="description" content="The Power of Virtualisation: Unlocking Flexibility and Efficiency in IT
+Virtualisation has revolutionised the way we approach computing, storage, and networking. By creating virtual environments that mimic physical ones, this technology has enabled businesses to increase efficiency, reduce costs, and enhance scalability. In this blog post, we’ll delve into the world of virtualisation, exploring its benefits, types, and applications.
+What is Virtualisation?
+Virtualisation is a software-based technology that creates a virtual version of a computer system, including hardware, storage, and networking resources. This virtual environment is decoupled from physical infrastructure, allowing multiple operating systems to run on a single physical machine. Virtualisation platforms, like VMware, Microsoft Hyper-V, or KVM, act as intermediaries between the physical hardware and the virtual machines (VMs) running on it.">
+  <meta itemprop="datePublished" content="2024-11-14T15:35:23+11:00">
+  <meta itemprop="dateModified" content="2024-11-14T15:35:23+11:00">
+  <meta itemprop="wordCount" content="1003">
+  <meta itemprop="image" content="http://localhost:1313/img/cover.png">
+
+      <header>
+        <h1 itemprop="headline">Virtualisation</h1>
+        <p class="text-sm">
+          
+            Thursday, Nov 14, 2024
+          
+
+          | <span>5 minute read</span>
+
+          
+          | <span>Updated at
+            
+              Thursday, Nov 14, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">Marcus Wathen</span>
+    
+  
+  </span>
+</div>
+
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Virtualisation&amp;url=http://localhost:1313/posts/virtualisation/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/virtualisation/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Virtualisation%20http://localhost:1313/posts/virtualisation/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      
+
+      <p><strong>The Power of Virtualisation: Unlocking Flexibility and Efficiency in IT</strong></p>
+<p>Virtualisation has revolutionised the way we approach computing, storage, and networking. By creating virtual environments that mimic physical ones, this technology has enabled businesses to increase efficiency, reduce costs, and enhance scalability. In this blog post, we&rsquo;ll delve into the world of virtualisation, exploring its benefits, types, and applications.</p>
+<p><strong>What is Virtualisation?</strong></p>
+<p>Virtualisation is a software-based technology that creates a virtual version of a computer system, including hardware, storage, and networking resources. This virtual environment is decoupled from physical infrastructure, allowing multiple operating systems to run on a single physical machine. Virtualisation platforms, like VMware, Microsoft Hyper-V, or KVM, act as intermediaries between the physical hardware and the virtual machines (VMs) running on it.</p>
+<p><strong>Benefits of Virtualisation</strong></p>
+<p>The advantages of virtualisation are numerous:</p>
+<ol>
+<li><strong>Increased flexibility</strong>: Virtualisation allows IT teams to quickly provision new environments for testing, development, or production without requiring a physical machine.</li>
+<li><strong>Improved resource utilisation</strong>: By consolidating multiple VMs onto a single physical host, businesses can reduce energy consumption and hardware costs.</li>
+<li><strong>Enhanced scalability</strong>: Virtualisation enables easy scaling of resources up or down to meet changing business needs.</li>
+<li><strong>Disaster recovery and backup</strong>: Virtual machines can be easily backed up and replicated for disaster recovery purposes.</li>
+<li><strong>Simplified management</strong>: Virtualisation platforms provide centralised control over virtual environments, making it easier to manage and monitor them.</li>
+</ol>
+<p><strong>Types of Virtualisation</strong></p>
+<p>There are several types of virtualisation:</p>
+<ol>
+<li><strong>Server virtualisation</strong>: This involves creating VMs on a physical server host (e.g., VMware ESXi).</li>
+<li><strong>Desktop virtualisation</strong>: Also known as virtual desktop infrastructure (VDI), this type involves running multiple desktop environments on a single physical machine.</li>
+<li><strong>Storage virtualisation</strong>: This technology presents a pool of storage resources as a single, unified entity (e.g., NetApp Storage Virtualisation).</li>
+<li><strong>Network virtualisation</strong>: This involves creating virtual networks that can be managed independently from physical infrastructure.</li>
+</ol>
+<p><strong>Applications of Virtualisation</strong></p>
+<p>Virtualisation has far-reaching implications for various industries:</p>
+<ol>
+<li><strong>Cloud computing</strong>: Virtualisation is the foundation upon which cloud services are built.</li>
+<li><strong>IT service management</strong>: Virtualisation helps organisations manage and deliver IT services more efficiently.</li>
+<li><strong>Software development and testing</strong>: Developers can quickly provision test environments using virtualisation.</li>
+<li><strong>Business continuity and disaster recovery</strong>: Virtualisation ensures business continuity by providing a reliable, high-availability infrastructure.</li>
+</ol>
+<p><strong>Challenges and Limitations</strong></p>
+<p>While virtualisation has many benefits, it also presents some challenges:</p>
+<ol>
+<li><strong>Security</strong>: Securing virtualised environments requires additional measures to prevent unauthorised access or data breaches.</li>
+<li><strong>Compatibility issues</strong>: Ensuring that VMs run seamlessly with physical hardware and software can be complex.</li>
+<li><strong>Performance optimisation</strong>: Virtual machines may experience performance degradation if not properly configured.</li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>Virtualisation has transformed the way we approach IT infrastructure, offering flexibility, efficiency, and scalability benefits. By understanding its types, applications, and challenges, businesses can harness the power of virtualisation to improve their operations, reduce costs, and enhance competitiveness. As technology continues to evolve, it&rsquo;s essential for organisations to stay informed about the latest developments in virtualisation and how they can be applied to drive success.</p>
+<p>Note: I&rsquo;ve replaced words like &ldquo;virtualization&rdquo; with &ldquo;virtualisation&rdquo;, &ldquo;utilization&rdquo; with &ldquo;utilisation&rdquo;, &ldquo;organization&rdquo; with &ldquo;organisation&rdquo;, etc. Let me know if you need any further assistance!Here is the rewritten blog post with Australian English spellings:</p>
+<p><strong>The Power of Virtualisation: Unlocking Flexibility and Efficiency in IT</strong></p>
+<p>Virtualisation has revolutionised the way we approach computing, storage, and networking. By creating virtual environments that mimic physical ones, this technology has enabled businesses to increase efficiency, reduce costs, and enhance scalability. In this blog post, we&rsquo;ll delve into the world of virtualisation, exploring its benefits, types, and applications.</p>
+<p><strong>What is Virtualisation?</strong></p>
+<p>Virtualisation is a software-based technology that creates a virtual version of a computer system, including hardware, storage, and networking resources. This virtual environment is decoupled from physical infrastructure, allowing multiple operating systems to run on a single physical machine. Virtualisation platforms, like VMware, Microsoft Hyper-V, or KVM, act as intermediaries between the physical hardware and the virtual machines (VMs) running on it.</p>
+<p><strong>Benefits of Virtualisation</strong></p>
+<p>The advantages of virtualisation are numerous:</p>
+<ol>
+<li><strong>Increased flexibility</strong>: Virtualisation allows IT teams to quickly provision new environments for testing, development, or production without requiring a physical machine.</li>
+<li><strong>Improved resource utilisation</strong>: By consolidating multiple VMs onto a single physical host, businesses can reduce energy consumption and hardware costs.</li>
+<li><strong>Enhanced scalability</strong>: Virtualisation enables easy scaling of resources up or down to meet changing business needs.</li>
+<li><strong>Disaster recovery and backup</strong>: Virtual machines can be easily backed up and replicated for disaster recovery purposes.</li>
+<li><strong>Simplified management</strong>: Virtualisation platforms provide centralised control over virtual environments, making it easier to manage and monitor them.</li>
+</ol>
+<p><strong>Types of Virtualisation</strong></p>
+<p>There are several types of virtualisation:</p>
+<ol>
+<li><strong>Server virtualisation</strong>: This involves creating VMs on a physical server host (e.g., VMware ESXi).</li>
+<li><strong>Desktop virtualisation</strong>: Also known as virtual desktop infrastructure (VDI), this type involves running multiple desktop environments on a single physical machine.</li>
+<li><strong>Storage virtualisation</strong>: This technology presents a pool of storage resources as a single, unified entity (e.g., NetApp Storage Virtualisation).</li>
+<li><strong>Network virtualisation</strong>: This involves creating virtual networks that can be managed independently from physical infrastructure.</li>
+</ol>
+<p><strong>Applications of Virtualisation</strong></p>
+<p>Virtualisation has far-reaching implications for various industries:</p>
+<ol>
+<li><strong>Cloud computing</strong>: Virtualisation is the foundation upon which cloud services are built.</li>
+<li><strong>IT service management</strong>: Virtualisation helps organisations manage and deliver IT services more efficiently.</li>
+<li><strong>Software development and testing</strong>: Developers can quickly provision test environments using virtualisation.</li>
+<li><strong>Business continuity and disaster recovery</strong>: Virtualisation ensures business continuity by providing a reliable, high-availability infrastructure.</li>
+</ol>
+<p><strong>Challenges and Limitations</strong></p>
+<p>While virtualisation has many benefits, it also presents some challenges:</p>
+<ol>
+<li><strong>Security</strong>: Securing virtualised environments requires additional measures to prevent unauthorised access or data breaches.</li>
+<li><strong>Compatibility issues</strong>: Ensuring that VMs run seamlessly with physical hardware and software can be complex.</li>
+<li><strong>Performance optimisation</strong>: Virtual machines may experience performance degradation if not properly configured.</li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>Virtualisation has transformed the way we approach IT infrastructure, offering flexibility, efficiency, and scalability benefits. By understanding its types, applications, and challenges, businesses can harness the power of virtualisation to improve their operations, reduce costs, and enhance competitiveness. As technology continues to evolve, it&rsquo;s essential for organisations to stay informed about the latest developments in virtualisation and how they can be applied to drive success.</p>
+
+
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>© 2024 The Batarang39 Blog</p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme =  null 
+  window.darkTheme =  null 
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+  <script src="/js/grid.js"></script>
+
+
+
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

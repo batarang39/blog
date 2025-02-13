@@ -6,14 +6,6 @@
     <description>Recent content in Category1 on The Batarang39 Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Oct 2024 15:50:23 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/category1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Themetest</title>
-      <link>http://localhost:1313/posts/themetest/</link>
-      <pubDate>Thu, 24 Oct 2024 15:50:23 +1100</pubDate>
-      <guid>http://localhost:1313/posts/themetest/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
